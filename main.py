@@ -76,7 +76,7 @@ async def phone(lel, message):
    if a==1:
       return
    if message.from_user.id not in PREMIUM:
-      await app.send_message(message.chat.id, f"**Artık Premium Kullanıcı değilsiniz\nLütfen Abonelik İçin\nDm\n\nCreator ❤️ @Bywolk**)
+      await app.send_message(message.chat.id, f"**Artık Premium Kullanıcı değilsiniz\nLütfen Abonelik İçin\nDm\n\nCreator ❤️ @Bywolk**")
       return
    if not os.path.exists(f"Users/{message.from_user.id}/phone.csv"):
       os.mkdir(f'./Users/{message.from_user.id}')
