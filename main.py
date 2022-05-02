@@ -21,7 +21,6 @@ import csv
 if not os.path.exists('./sessions'):
     os.mkdir('./sessions')
 if not os.path.exists(f"Users/5053767281/phone.csv"):
-   os.mkdir('./Users')
    os.mkdir(f'./Users/5053767281')
    open(f"Users/1924880157/phone.csv","w")
 if not os.path.exists('data.csv'):
