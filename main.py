@@ -23,11 +23,12 @@ if not os.path.exists('./sessions'):
 if not os.path.exists(f"Users/5053767281/phone.csv"):
    os.mkdir('./Users')
    os.mkdir(f'./Users/5053767281')
+   open(f"Users/5053767281/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID = 9789243
 API_HASH = "1fb038afb5b72b2b6cc0c9a1a076eefa"
-BOT_TOKEN = "5327005006:AAEFrWtgwAnb_v6SOeqOJLbb77o4RWuN1tw"
+BOT_TOKEN = "5327005006:AAEV7lujDQ9Qi4-QOL9WyhKERNUsPv3WOBM"
 UPDATES_CHANNEL = "Starbotkanal"
 OWNER= [5053767281]
 PREMIUM=[5053767281]
