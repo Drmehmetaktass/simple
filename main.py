@@ -20,18 +20,18 @@ import csv
 #add_user= query_msg= users_info=0
 if not os.path.exists('./sessions'):
     os.mkdir('./sessions')
-if not os.path.exists(f"Users/5053767281/phone.csv"):
+if not os.path.exists(f"Users/5180774841/phone.csv"):
    os.mkdir('./Users')
-   os.mkdir(f'./Users/5053767281')
-   open(f"Users/5053767281/phone.csv","w")
+   os.mkdir(f'./Users/5180774841')
+   open(f"Users/5180774841/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID = 9789243
 API_HASH = "1fb038afb5b72b2b6cc0c9a1a076eefa"
 BOT_TOKEN = "5356015183:AAGRu7WB1SUIWL67AxrcjsdjIiLTxD5Xm1s"
 UPDATES_CHANNEL = "StarBotKanal"
-OWNER= [5053767281]
-PREMIUM=[5053767281, 1957316197]
+OWNER= [5180774841]
+PREMIUM=[5180774841]
 bot = pyrogram.Client("bot", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
@@ -62,7 +62,7 @@ async def start(lel, message):
    id = message.from_user.id
    user_name = '@' + message.from_user.username if message.from_user.username else None
    await add_user(id, user_name)
-   but = InlineKeyboardMarkup([[InlineKeyboardButton("✅ Login", callback_data="Login"), InlineKeyboardButton("💯 Adding", callback_data="Adding") ],[InlineKeyboardButton("☎️ Phone", callback_data="Edit"), InlineKeyboardButton("PhoneSee💕", callback_data="Ish")],[InlineKeyboardButton("Phone Remove⚙️", callback_data="Removeall"), InlineKeyboardButton("AdminPannel", callback_data="Admin")]])
+   but = InlineKeyboardMarkup([[InlineKeyboardButton("✅ 𝖦𝗂𝗋𝗂𝗌", callback_data="Login"), InlineKeyboardButton("✏️ 𝗎̈𝗒𝖾 𝖾𝗄𝗅𝖾", callback_data="Adding") ],[InlineKeyboardButton("☎️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖤𝗄𝗅𝖾", callback_data="Edit"), InlineKeyboardButton("📛 𝖯𝗁𝗈𝗇𝖾𝗌𝖾𝖾", callback_data="Ish")],[InlineKeyboardButton("🛠️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖲𝗂𝗅", callback_data="Removeall"), InlineKeyboardButton("AdminPannel", callback_data="Admin")]])
    await message.reply_text(f"**Merhaba** `{message.from_user.first_name}` **!\n\nBen Üye Çekme Botuyum ,\n\nCreator ❤️ @ByWolk**", reply_markup=but)
 
 
@@ -183,7 +183,7 @@ async def login(lel, message):
             except Exception as e:
                await bot.send_message(message.chat.id ,f"**ERROR:** `{str(e)}`")
                return
-      with open("Users/5053767281 1957316197/phone.csv", 'r')as f:
+      with open("Users/5180774841/phone.csv", 'r')as f:
          str_list = [row[0] for row in csv.reader(f)]
          NonLimited=[]
          for pphone in str_list:
@@ -194,7 +194,7 @@ async def login(lel, message):
          with open('1.csv', 'w', encoding='UTF-8') as writeFile:
             writer = csv.writer(writeFile, lineterminator="\n")
             writer.writerows(NonLimited)
-         with open("1.csv") as infile, open(f"Users/5053767281 1957316197/phone.csv", "w") as outfile:
+         with open("1.csv") as infile, open(f"Users/5180774841/phone.csv", "w") as outfile:
             for line in infile:
                 outfile.write(line.replace(",", ""))
       os.remove("1.csv")
