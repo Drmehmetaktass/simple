@@ -32,7 +32,7 @@ BOT_TOKEN = "5327005006:AAEV7lujDQ9Qi4-QOL9WyhKERNUsPv3WOBM"
 UPDATES_CHANNEL = "deneme"
 OWNER= [5053767281]
 PREMIUM=[5053767281]
-app = pyrogram.Client("app", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+bot = pyrogram.Client("bot", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
     rows = csv.reader(f, delimiter=",", lineterminator="\n")
@@ -51,7 +51,7 @@ async def Subscribe(lel, message):
 
 
 # ------------------------------- Start --------------------------------- #
-@app.on_message(filters.private & filters.command(["start"]))
+@bot.on_message(filters.private & filters.command(["start"]))
 async def start(lel, message):
    a= await Subscribe(lel, message)
    if a==1:
@@ -68,7 +68,7 @@ async def start(lel, message):
 
 
 # ------------------------------- Set Phone No --------------------------------- #
-@app.on_message(filters.private & filters.command(["phone"]))
+@bot.on_message(filters.private & filters.command(["phone"]))
 async def phone(lel, message):
  try:
    await message.delete()
@@ -122,7 +122,7 @@ async def phone(lel, message):
 
 
 # ------------------------------- Acc Login --------------------------------- #
-@app.on_message(filters.private & filters.command(["login"]))
+@bot.on_message(filters.private & filters.command(["login"]))
 async def login(lel, message):
  try:
    await message.delete()
@@ -236,7 +236,7 @@ async def login(lel, message):
 
 
 # ------------------------------- Acc Private Adding --------------------------------- #
-@app.on_message(filters.private & filters.command(["adding"]))
+@bot.on_message(filters.private & filters.command(["adding"]))
 async def to(lel, message):
  try:
    a= await Subscribe(lel, message)
@@ -334,7 +334,7 @@ async def to(lel, message):
 
 
 # ------------------------------- Start --------------------------------- #
-@app.on_message(filters.private & filters.command(["phonesee"]))
+@bot.on_message(filters.private & filters.command(["phonesee"]))
 async def start(lel, message):
    a= await Subscribe(lel, message)
    if a==1:
@@ -365,7 +365,7 @@ async def start(lel, message):
 
 
 # ------------------------------- Start --------------------------------- #
-@app.on_message(filters.private & filters.command(["removeall"]))
+@bot.on_message(filters.private & filters.command(["removeall"]))
 async def removeall(lel, message):
  try:
    try:
@@ -384,7 +384,7 @@ async def removeall(lel, message):
    await app.send_message(message.chat.id, f"Error: {e}\n\nCreator ❤️ @bywolk")
    return
 
-@app.on_message(filters.private & filters.command(["remove"]))
+@bot.on_message(filters.private & filters.command(["remove"]))
 async def start(lel, message):
  try:
    a= await Subscribe(lel, message)
@@ -414,7 +414,7 @@ async def start(lel, message):
    return
 
 # ------------------------------- Admin Pannel --------------------------------- #
-@app.on_message(filters.private & filters.command('ishan'))
+@bot.on_message(filters.private & filters.command('ishan'))
 async def subscribers_count(lel, message):
    a= await Subscribe(lel, message)
    if a==1:
@@ -428,7 +428,7 @@ async def subscribers_count(lel, message):
 
 
 # ------------------------------- Buttons --------------------------------- #
-@app.on_callback_query()
+@bot.on_callback_query()
 async def button(app, update):
    k = update.data
    if "Login" in k:
@@ -533,4 +533,4 @@ text = """
 """
 print(text)
 print("Uyarılmış Ekleme Başarıyla Başladı........")
-app.run()
+bot.run()
