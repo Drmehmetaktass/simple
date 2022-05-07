@@ -377,7 +377,7 @@ async def removeall(lel, message):
          with open(f"Users/{message.from_user.id}/1.csv") as infile, open(f"Users/{message.from_user.id}/phone.csv", "w") as outfile:
             for line in infile:
                outfile.write(line.replace(",", ""))
-         await app.send_message(chat_id=message.chat.id,text="Başarıyla Tamamlandı")
+         await bot.send_message(chat_id=message.chat.id,text="Başarıyla Tamamlandı")
    except Exception as a:
       pass
  except Exception as e:
