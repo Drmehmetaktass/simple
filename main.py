@@ -397,7 +397,7 @@ async def start(lel, message):
       with open(f"Users/{message.from_user.id}/phone.csv", 'r')as f:
          str_list = [row[0] for row in csv.reader(f)]
          f.closed
-         number = await app.ask(chat_id=message.chat.id, text="**Kaldırılacak Numarayı Gönder\n\nCreator ❤️ @bywolk**")
+         number = await bot.ask(chat_id=message.chat.id, text="**Kaldırılacak Numarayı Gönder\n\nCreator ❤️ @bywolk**")
          print(str_list)
          str_list.remove(number.text)
          with open(f"Users/{message.from_user.id}/1.csv", 'w', encoding='UTF-8') as writeFile:
