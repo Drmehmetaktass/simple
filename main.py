@@ -31,7 +31,7 @@ API_HASH = "1fb038afb5b72b2b6cc0c9a1a076eefa"
 BOT_TOKEN = "5356015183:AAGRu7WB1SUIWL67AxrcjsdjIiLTxD5Xm1s"
 UPDATES_CHANNEL = "StarBotKanal"
 OWNER= [5053767281]
-PREMIUM=[5053767281 1957316197]
+PREMIUM=[5053767281, 1957316197]
 bot = pyrogram.Client("bot", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
