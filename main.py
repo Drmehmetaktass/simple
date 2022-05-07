@@ -433,7 +433,7 @@ async def button(app, update):
    k = update.data
    if "Login" in k:
       await update.message.delete()
-      await app.send_message(update.message.chat.id, """**Artık hiçbir şey yok..!\nGiriş yapmak ve Hesap istatistiklerini kontrol etmek için /login'e tıklamanız yeterli.\n\nCreator ❤️ @bywolk**""") 
+      await bot.send_message(update.message.chat.id, """**Artık hiçbir şey yok..!\nGiriş yapmak ve Hesap istatistiklerini kontrol etmek için /login'e tıklamanız yeterli.\n\nCreator ❤️ @bywolk**""") 
    elif "Ish" in k:
       await update.message.delete()
       await bot.send_message(update.message.chat.id, """**Artık hiçbir şey yok..!\nGiriş yapmak ve Hesap istatistiklerini kontrol etmek için /phonesee'ye tıklamanız yeterli.\n\nCreator ❤️ @bywolk**""") 
