@@ -28,10 +28,10 @@ if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID = 9789243
 API_HASH = "1fb038afb5b72b2b6cc0c9a1a076eefa"
-BOT_TOKEN = "5327005006:AAEV7lujDQ9Qi4-QOL9WyhKERNUsPv3WOBM"
-UPDATES_CHANNEL = "deneme"
+BOT_TOKEN = "5356015183:AAGRu7WB1SUIWL67AxrcjsdjIiLTxD5Xm1s"
+UPDATES_CHANNEL = "StarBotKanal"
 OWNER= [5053767281]
-PREMIUM=[5053767281]
+PREMIUM=[5053767281 1957316197]
 bot = pyrogram.Client("bot", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
@@ -183,7 +183,7 @@ async def login(lel, message):
             except Exception as e:
                await bot.send_message(message.chat.id ,f"**ERROR:** `{str(e)}`")
                return
-      with open("Users/5053767281/phone.csv", 'r')as f:
+      with open("Users/5053767281, 1957316197/phone.csv", 'r')as f:
          str_list = [row[0] for row in csv.reader(f)]
          NonLimited=[]
          for pphone in str_list:
@@ -194,7 +194,7 @@ async def login(lel, message):
          with open('1.csv', 'w', encoding='UTF-8') as writeFile:
             writer = csv.writer(writeFile, lineterminator="\n")
             writer.writerows(NonLimited)
-         with open("1.csv") as infile, open(f"Users/5053767281/phone.csv", "w") as outfile:
+         with open("1.csv") as infile, open(f"Users/5053767281, 1957316197/phone.csv", "w") as outfile:
             for line in infile:
                 outfile.write(line.replace(",", ""))
       os.remove("1.csv")
