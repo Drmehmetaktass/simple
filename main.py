@@ -28,7 +28,7 @@ if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID = 9789243
 API_HASH = "1fb038afb5b72b2b6cc0c9a1a076eefa"
-BOT_TOKEN = "5356015183:AAG0lv_knTv-S99i28w4mqQk8PYhrZW1bx8"
+BOT_TOKEN = "5181092498:AAF0y7SZofIrF6Gis996qqxuthXsQH5tBeQ"
 UPDATES_CHANNEL = "StarBotKanal"
 OWNER= [5180774841]
 PREMIUM=[5180774841]
