@@ -20,10 +20,10 @@ import csv
 #add_user= query_msg= users_info=0
 if not os.path.exists('./sessions'):
     os.mkdir('./sessions')
-if not os.path.exists(f"Users//phone.csv"):
+if not os.path.exists(f"Users/5180774841/phone.csv"):
    os.mkdir('./Users')
-   os.mkdir(f'./Users/')
-   open(f"Users//phone.csv","w")
+   os.mkdir(f'./Users/5180774841')
+   open(f"Users/5180774841/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID = 9789243
