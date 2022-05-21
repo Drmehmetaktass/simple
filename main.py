@@ -62,7 +62,7 @@ async def start(lel, message):
    id = message.from_user.id
    user_name = '@' + message.from_user.username if message.from_user.username else None
    await add_user(id, user_name)
-   but = InlineKeyboardMarkup([[InlineKeyboardButton("✅ 𝖦𝗂𝗋𝗂𝗌", callback_data="Login"), InlineKeyboardButton("✏️ 𝗎̈𝗒𝖾 𝖾𝗄𝗅𝖾", callback_data="Adding") ],[InlineKeyboardButton("☎️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖤𝗄𝗅𝖾", callback_data="Edit"), InlineKeyboardButton("📛 𝖯𝗁𝗈𝗇𝖾𝗌𝖾𝖾", callback_data="Ish")],[InlineKeyboardButton("🛠️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖲𝗂𝗅", callback_data="Removeall"), InlineKeyboardButton("AdminPannel", callback_data="Admin")]])
+   but = InlineKeyboardMarkup([[InlineKeyboardButton("✅ 𝖦𝗂𝗋𝗂𝗌", callback_data="Login"), InlineKeyboardButton("✏️ 𝗎̈𝗒𝖾 𝖾𝗄𝗅𝖾", callback_data="Adding") ],[InlineKeyboardButton("☎️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖤𝗄𝗅𝖾", callback_data="Edit"), InlineKeyboardButton("📛 𝖭𝗎𝗆𝖺𝗋𝖺𝗅𝖺𝗋", callback_data="Ish")],[InlineKeyboardButton("🛠️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖲𝗂𝗅", callback_data="Removeall"), InlineKeyboardButton("✅ 𝖠𝖽𝗆𝗂𝗇 𝖯𝖺𝗇𝖾𝗅", callback_data="Admin")],[InlineKeyboardButton("🇹🇷 𝖱𝖾𝗌𝗆𝗂 𝖪𝖺𝗇𝖺𝗅", url=f"https://t.me/StarBotKanal")]])
    await message.reply_text(f"**Merhaba** `{message.from_user.first_name}` **!\n\nBen Üye Çekme Botuyum ,\n\nCreator ❤️ @ByWolk**", reply_markup=but)
 
 
@@ -183,7 +183,7 @@ async def login(lel, message):
             except Exception as e:
                await bot.send_message(message.chat.id ,f"**ERROR:** `{str(e)}`")
                return
-      with open("Users/5180774841/phone.csv", 'r')as f:
+      with open("Users/{message.from_user.id}/phone.csv", 'r')as f:
          str_list = [row[0] for row in csv.reader(f)]
          NonLimited=[]
          for pphone in str_list:
@@ -194,7 +194,7 @@ async def login(lel, message):
          with open('1.csv', 'w', encoding='UTF-8') as writeFile:
             writer = csv.writer(writeFile, lineterminator="\n")
             writer.writerows(NonLimited)
-         with open("1.csv") as infile, open(f"Users/5180774841/phone.csv", "w") as outfile:
+         with open("1.csv") as infile, open(f"Users/{message.from_user.id}/phone.csv", "w") as outfile:
             for line in infile:
                 outfile.write(line.replace(",", ""))
       os.remove("1.csv")
