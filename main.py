@@ -26,9 +26,9 @@ if not os.path.exists(f"Users/5180774841/phone.csv"):
    open(f"Users/5180774841/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
-APP_ID = 9789243
-API_HASH = "1fb038afb5b72b2b6cc0c9a1a076eefa"
-BOT_TOKEN = "5181092498:AAF0y7SZofIrF6Gis996qqxuthXsQH5tBeQ"
+APP_ID = 16625296
+API_HASH = "a0dbae3d77218acb564bdf996ef990a7"
+BOT_TOKEN = "5249125506:AAFOH8I-ZqayBi3zRVF30_xWNiIgo19Ovjk"
 UPDATES_CHANNEL = "StarBotKanal"
 OWNER= [5180774841]
 PREMIUM=[5180774841]
