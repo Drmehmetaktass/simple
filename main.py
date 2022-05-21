@@ -20,10 +20,10 @@ import csv
 #add_user= query_msg= users_info=0
 if not os.path.exists('./sessions'):
     os.mkdir('./sessions')
-if not os.path.exists(f"Users/none/phone.csv"):
+if not os.path.exists(f"Users//phone.csv"):
    os.mkdir('./Users')
-   os.mkdir(f'./Users/none')
-   open(f"Users/none/phone.csv","w")
+   os.mkdir(f'./Users/')
+   open(f"Users//phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID = 9789243
@@ -31,7 +31,7 @@ API_HASH = "1fb038afb5b72b2b6cc0c9a1a076eefa"
 BOT_TOKEN = "5181092498:AAF0y7SZofIrF6Gis996qqxuthXsQH5tBeQ"
 UPDATES_CHANNEL = "StarBotKanal"
 OWNER= [5180774841]
-PREMIUM=[none]
+PREMIUM=[]
 bot = pyrogram.Client("bot", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
