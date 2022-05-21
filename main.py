@@ -63,7 +63,7 @@ async def start(lel, message):
    user_name = '@' + message.from_user.username if message.from_user.username else None
    await add_user(id, user_name)
    but = InlineKeyboardMarkup([[InlineKeyboardButton("🧑🏻‍💻 ㅤİ𝗅𝖾𝗍𝗂𝗌𝗂𝗆 ㅤ🧑🏻‍💻", url=f"https://t.me/ByWolk")],[InlineKeyboardButton("✅ 𝖦𝗂𝗋𝗂𝗌", callback_data="Login"), InlineKeyboardButton("✏️ 𝗎̈𝗒𝖾 𝖾𝗄𝗅𝖾", callback_data="Adding") ],[InlineKeyboardButton("☎️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖤𝗄𝗅𝖾", callback_data="Edit"), InlineKeyboardButton("📛 𝖭𝗎𝗆𝖺𝗋𝖺𝗅𝖺𝗋", callback_data="Ish")],[InlineKeyboardButton("🛠️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖲𝗂𝗅", callback_data="Removeall"), InlineKeyboardButton("✅ 𝖠𝖽𝗆𝗂𝗇 𝖯𝖺𝗇𝖾𝗅", callback_data="Admin")],[InlineKeyboardButton("🇹🇷 𝖱𝖾𝗌𝗆𝗂 𝖪𝖺𝗇𝖺𝗅", url=f"https://t.me/StarBotKanal")]])
-   await message.reply_text(f"• **Merhaba** `{message.from_user.mention}` **\n\n• Ben Üye Çekme Botuyum ,\n\n» Bu Botu Kullanmak İstiyorsanız \nAşağıdaki 🧑🏻‍💻 İletisim 🧑🏻‍💻 Butonuna \nTıklayıp Yardım İsteyebilirsiniz . . . \n\n •> `Tamamen Ücretsizdir . . .` **", reply_markup=but)
+   await message.reply_text(f"• **Merhaba** {message.from_user.mention} **\n\n• Ben Üye Çekme Botuyum ,\n\n» Bu Botu Kullanmak İstiyorsanız \nAşağıdaki 🧑🏻‍💻 İletisim 🧑🏻‍💻 Butonuna \nTıklayıp Yardım İsteyebilirsiniz . . . \n\n •> `Tamamen Ücretsizdir . . .` **", reply_markup=but)
 
 
 
