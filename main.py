@@ -20,10 +20,10 @@ import csv
 #add_user= query_msg= users_info=0
 if not os.path.exists('./sessions'):
     os.mkdir('./sessions')
-if not os.path.exists(f"Users/5180774841/phone.csv"):
+if not os.path.exists(f"Users/{message.from_user.id}/phone.csv"):
    os.mkdir('./Users')
-   os.mkdir(f'./Users/5180774841')
-   open(f"Users/5180774841/phone.csv","w")
+   os.mkdir(f'./Users/{message.from_user.id}')
+   open(f"Users/{message.from_user.id}/phone.csv","w")
 if not os.path.exists('data.csv'):
     open("data.csv","w")
 APP_ID = 9789243
@@ -340,7 +340,7 @@ async def start(lel, message):
    if a==1:
       return
    if message.from_user.id not in PREMIUM:
-      await bot.send_message(message.chat.id, f"**Artık Premium Kullanıcı değilsiniz\nLütfen Abonelik İçin\nDm\n\nCreator ❤️ @jackdanielssx**")
+      await bot.send_message(message.chat.id, f"**Artık Premium Kullanıcı değilsiniz\nLütfen Abonelik İçin\nDm\n\nCreator ❤️ @ByWolk**")
       return
    try:
       with open(f"Users/{message.from_user.id}/phone.csv", 'r')as f:
