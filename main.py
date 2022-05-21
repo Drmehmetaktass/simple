@@ -31,7 +31,7 @@ API_HASH = "1fb038afb5b72b2b6cc0c9a1a076eefa"
 BOT_TOKEN = "5181092498:AAF0y7SZofIrF6Gis996qqxuthXsQH5tBeQ"
 UPDATES_CHANNEL = "StarBotKanal"
 OWNER= [5180774841]
-PREMIUM=[]
+PREMIUM=[5180774841]
 bot = pyrogram.Client("bot", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 with open("data.csv", encoding='UTF-8') as f:
@@ -62,8 +62,8 @@ async def start(lel, message):
    id = message.from_user.id
    user_name = '@' + message.from_user.username if message.from_user.username else None
    await add_user(id, user_name)
-   but = InlineKeyboardMarkup([[InlineKeyboardButton("✅ 𝖦𝗂𝗋𝗂𝗌", callback_data="Login"), InlineKeyboardButton("✏️ 𝗎̈𝗒𝖾 𝖾𝗄𝗅𝖾", callback_data="Adding") ],[InlineKeyboardButton("☎️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖤𝗄𝗅𝖾", callback_data="Edit"), InlineKeyboardButton("📛 𝖭𝗎𝗆𝖺𝗋𝖺𝗅𝖺𝗋", callback_data="Ish")],[InlineKeyboardButton("🛠️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖲𝗂𝗅", callback_data="Removeall"), InlineKeyboardButton("✅ 𝖠𝖽𝗆𝗂𝗇 𝖯𝖺𝗇𝖾𝗅", callback_data="Admin")],[InlineKeyboardButton("🇹🇷 𝖱𝖾𝗌𝗆𝗂 𝖪𝖺𝗇𝖺𝗅", url=f"https://t.me/StarBotKanal")]])
-   await message.reply_text(f"**Merhaba** `{message.from_user.first_name}` **!\n\nBen Üye Çekme Botuyum ,\n\nCreator ❤️ @ByWolk**", reply_markup=but)
+   but = InlineKeyboardMarkup([[InlineKeyboardButton("🧑🏻‍💻 İ𝗅𝖾𝗍𝗂𝗌𝗂𝗆 🧑🏻‍💻", url=f"https://t.me/ByWolk")],[InlineKeyboardButton("✅ 𝖦𝗂𝗋𝗂𝗌", callback_data="Login"), InlineKeyboardButton("✏️ 𝗎̈𝗒𝖾 𝖾𝗄𝗅𝖾", callback_data="Adding") ],[InlineKeyboardButton("☎️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖤𝗄𝗅𝖾", callback_data="Edit"), InlineKeyboardButton("📛 𝖭𝗎𝗆𝖺𝗋𝖺𝗅𝖺𝗋", callback_data="Ish")],[InlineKeyboardButton("🛠️ 𝖭𝗎𝗆𝖺𝗋𝖺 𝖲𝗂𝗅", callback_data="Removeall"), InlineKeyboardButton("✅ 𝖠𝖽𝗆𝗂𝗇 𝖯𝖺𝗇𝖾𝗅", callback_data="Admin")],[InlineKeyboardButton("🇹🇷 𝖱𝖾𝗌𝗆𝗂 𝖪𝖺𝗇𝖺𝗅", url=f"https://t.me/StarBotKanal")]])
+   await message.reply_text(f"**Merhaba** `{message.from_user.first_name}` **!\n\nBen Üye Çekme Botuyum ,\n\nBu Botu Kullanmak İstiyorsanız Aşağıdaki `İletisim` Butonundan Yardım İsteyebilirsiniz . . . \n\n •> `Tamamen Ücretsizdir` . . .**", reply_markup=but)
 
 
 
