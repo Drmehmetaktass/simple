@@ -1,0 +1,44 @@
+
+{
+  "name": "Majeste Adder",
+  "logo": "https://telegra.ph/file/3b9d564027d3d690db7b3.jpg",
+  "description": "Telegram' uye cekme botu",
+  "keywords": [
+    "telegram",
+    "best",
+    "group",
+    "manager",
+    "3"
+  ],
+  "repository": "hhttps://github.com/MacroKeke/Adderboq",
+  "env": {
+    "APP_ID": {
+      "description": "my.telegram.org dan alın.",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "my.telegram.org dan alın.",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "@BotFather 'in verdiği bot jetonunuzu girin",
+      "value": ""
+    },
+    "OWNER": {
+      "description": "Sahibi olarak eklenmesini istediginiz kullanicinin id si.",
+      "value": ""
+    },
+    "PREMIUM": {
+      "description": "premium kullanici id leri",
+      "value": ""
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "14"
+      }
+    }
+  ]
+}
